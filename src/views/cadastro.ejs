@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Facas de corte e vinco</title>
+  
+  <link rel="stylesheet" href="/css/cadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+ <header>
+  <div class="description">
+    <a href="/">    <img  id="imgLogo" src="/assets/lg_gerprint (1).png" alt=""></a>
+
+    <h4>Cadastro</h4>
+    <h4><a href='/consultaFacas'>Consultar Facas</a></h4>
+  </div>
+
+ 
+
+ </header>
+      
+   <section id="form-Cadastro">
+    <div class="flashMessage">
+      <span><%-include('includes/messages');%></span> 
+    </div>
+    <div class="contents">
+      <% if(contato.id){ %>
+      <form action="/cadastro/edit/<%=contato._id %>" method="POST">
+        <% }else { %>
+          <form action="/cadastro/register" method="POST">
+          <% } %>
+         <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+        <fieldset>
+          <legend>Cadastro</legend>
+         <div class="field-group">
+         
+            <label for="id">Id:</label>
+            <input  value="<%= contato.idCadastro %>" type="number" name="idCadastro" id="idCadastro" >
+         
+    
+         
+            <label for="cliente">Cliente:</label>
+            <input   value="<%= contato.cliente %>" type="text" name="cliente" id="cliente">
+       
+    
+            <label for="codigo">Código:</label>
+            <input   value="<%= contato.codigo %>"type="number" name="codigo"  id="codigo">
+         
+    
+      
+            <label for="referencia">Referencia:</label>
+            <input  value="<%= contato.referencia %>" type="text" name="referencia" id="referencia">
+       
+      
+            <label for="observacao">Observação:</label>
+            <textarea   cols="15" rows="5"  name="observacao" placeholder=" observaçao" id="observacao"><%=contato.observacao%></textarea>
+        
+    
+    
+            <label for="tipo_maquina">
+              <span>Maquina</span>
+            </label>
+            <select id="tipo_maquina" name="tipo_maquina" >
+              <option value="bobst">Bobst</option>
+              <option value="manual">Manual</option>
+            </select>
+     
+        
+          </div>
+        </fieldset>
+        <div class="buttons">
+          <button id="btn-submit" >Salvar</button>
+          
+        </div>
+       
+      </form>
+    
+    </div>
+   </section>
+   
+ 
+</body>
+</html>

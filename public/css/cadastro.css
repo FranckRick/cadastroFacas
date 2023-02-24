@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+:root{
+  --primary-color:rgb(22 163 74 );
+  --bg-light: hsl(180, 14%, 97%);
+  --bg-color:rgb(240 253 244 );
+  --btn-color: hsl(82, 81%, 44%);
+  --txt-color: hsla(130, 56%, 12%, 1);
+  font-size: 62.5%; /* 1rem = 10px*/
+
+}
+
+
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+  
+}
+
+body{
+  font-family: 'DM Sans'; 
+  font-size: 1rem;
+  text-align: center;
+  background-color: var(--bg-light);
+ 
+  
+}
+
+header{
+      /* display: block; */
+      position: fixed;
+      top: 0;
+      /* left: 0; */
+      width: 100%;
+  background-color: var(--primary-color)
+}
+
+header .description #imgLogo {
+ height: 4.5rem;
+}
+
+
+header .description{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+ padding: 1rem;
+ 
+}
+header .description h4{
+   font-size: 1.4rem;
+  
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.08rem;
+   color:hsl(127deg 78% 10%)
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin: .5rem;
+padding: .5rem;
+min-height: 80%;
+flex-direction: column;
+
+
+}
+a:visited{
+  color:var(--txt-color);
+}
+a {
+
+  text-decoration: none;
+  color: inherit;
+}
+.flashMessage{
+  margin-bottom: 3rem;
+}
+
+.contents{
+   text-align: left;
+  width: min(35rem, 95%);
+  margin-inline: auto;
+  padding-inline: 1.4rem;
+  border-radius: .4rem;
+  background-color:white;
+ box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.678) ;
+
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+fieldset{
+  margin: .8rem;
+}
+
+legend{
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  columns: var(--txt-color);
+  
+ 
+}
+.contents ul{
+text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color:red;
+  
+  text-transform: uppercase;
+
+}
+
+.contents input{
+  width: 95%;
+  height: 2.5rem;
+  margin: .6rem;
+  border-radius: .5rem;
+  border: solid 0.5px;
+  
+}
+
+.field-group{
+  
+  margin-bottom: 2rem;
+}
+
+#logo-search{
+  height:30px;
+  width: 30px
+}
+
+ label {
+  padding: .4rem;
+
+   font-size: 1.5rem;
+  color: var(--txt-color);
+  font-weight: 600;
+
+  letter-spacing: 0.08rem;
+}
+
+input:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0;
+
+}
+
+
+
+ textarea{
+  resize:none;
+  margin: 0.6rem;
+ }
+
+
+ .buttons{
+  gap: 0.5rem;
+  display: flex;
+  justify-content: center;
+  padding-inline: 1.4rem;
+  
+}
+
+ #btn-submit{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 4rem;
+   border-radius: .4rem;
+   margin-top: .8rem;
+   margin-bottom: .8rem;
+   border: none;
+   color: var(--txt-color);
+   padding: .4rem;
+   background-color: var(--btn-color);
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.08rem;
+   
+ }
+ 
+ #btn-submit:hover{
+   background-color: hsl(81, 88%, 80%);
+   transition: background 200ms;
+ }
+
+
+
+
+
+/* ############################## CADASTRO ############################### */
+
+
+
+/*@media (min-width: 1024px) {
+  header .description h4{
+    font-size: 2.4rem;
+    line-height: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    color:hsl(127deg 78% 10%)
+ }
+
+ header .description #imgLogo {
+  height: 7rem;
+ }
+}*/
