@@ -8,6 +8,19 @@
 
 }
 
+section{
+  z-index: -1;
+  top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  /* min-height: 80%; */
+  flex-direction: column;
+  position: absolute;
+}
+
 table{
 align-items: center;
 

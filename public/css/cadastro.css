@@ -35,11 +35,7 @@ body{
 }
 
 header{
-      /* display: block; */
-      position: fixed;
-      top: 0;
-      /* left: 0; */
-      width: 100%;
+
   background-color: var(--primary-color)
 }
 
@@ -52,6 +48,7 @@ header .description{
   display: flex;
   justify-content:space-around;
   align-items: center;
+  gap: 0.5rem;
  padding: 1rem;
  
 }
@@ -102,7 +99,7 @@ a {
 form{
   display: flex;
   flex-direction: column;
-  margin-top: 10rem;
+ /*  margin-top: 10rem; */
 }
 
 fieldset{

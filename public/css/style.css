@@ -66,14 +66,13 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
 margin: .5rem;
-padding: .5rem;
-min-height: 80%;
+
 
 
 }
 
 section .contents{
-  display: flex;
+ /*  display: flex; */
   padding: 2rem;
   border-radius: .4rem;
   background-color:white;

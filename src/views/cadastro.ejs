@@ -29,10 +29,11 @@
  </header>
       
    <section id="form-Cadastro">
-    <div class="flashMessage">
-      <span><%-include('includes/messages');%></span> 
-    </div>
+
     <div class="contents">
+      <div class="flashMessage">
+        <span><%-include('includes/messages');%></span> 
+      </div>
       <% if(contato.id){ %>
       <form action="/cadastro/edit/<%=contato._id %>" method="POST">
         <% }else { %>
