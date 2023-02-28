@@ -8,6 +8,40 @@
 
 }
 
+header{
+  /*preencher tela toda*/
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+
+  background-color: var(--primary-color)
+}
+
+header .description #imgLogo {
+ height: 4.5rem;
+}
+
+
+header .description{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap: 0.5rem;
+ padding: 1rem;
+ 
+}
+header .description h4{
+   font-size: 1.4rem;
+  
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.08rem;
+   color:hsl(127deg 78% 10%)
+}
+
+
 section{
   z-index: -1;
   top: 8rem;
