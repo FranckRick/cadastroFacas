@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,32 +22,14 @@
     <h4>Catálogo facas de corte e vinco</h4>
   </div>
  </header>
-  
+      
    <section id="form-login">
-    <div class="flashMessage">
-      <span><%-include('includes/messages');%></span> 
-    </div>
     <div class="contents">
- 
-     <form action="/" method="post">
-    
-      <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+     <form action="#">
       <label  for="login">E-mail</label>
-     <input  class="input-login" autofocus type="email" name="email" id="login">
+     <input  class="input-login" autofocus type="email" name="login" id="login">
       <label for="password">Senha</label>
-      <input class="input-senha" type="password" name="password" id="password">
-    
-      <button id="btn-submit"  type="submit">Cadastro</button> 
-     
-     </form>
-
-     <form action="/login" method="post">
-      <input type="hidden" name="_csrf" value="<%=csrfToken%>">
-      <label  for="login">E-mail</label>
-     <input  class="input-login" autofocus type="email" name="email" id="login">
-      <label for="password">Senha</label>
-      <input class="input-senha" type="password" name="password" id="password">
-    
+      <input class="input-senha" type="password" name="senha" id="password">
      <button id="btn-submit"  type="submit">Login</button> 
      </form>
     </div>

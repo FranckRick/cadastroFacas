@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,6 @@
     <a href="/">    <img  id="imgLogo" src="/assets/lg_gerprint (1).png" alt=""></a>
 
     <h4>Cadastro</h4>
-    <h4><a href='/consultaFacas'>Consultar Facas</a></h4>
   </div>
 
  
@@ -29,41 +28,39 @@
  </header>
       
    <section id="form-Cadastro">
-
     <div class="contents">
-      <div class="flashMessage">
-        <span><%-include('includes/messages');%></span> 
-      </div>
-      <% if(contato.id){ %>
-      <form action="/cadastro/edit/<%=contato._id %>" method="POST">
-        <% }else { %>
-          <form action="/cadastro/register" method="POST">
-          <% } %>
-         <input type="hidden" name="_csrf" value="<%=csrfToken%>">
+      <ul>
+        <% for (let error of errors){%>
+        <li>
+         <%=error.texto%>
+      </li>
+      <%}%>
+    </ul>
+      <form action="/cadastro/register" method="POST">
         <fieldset>
           <legend>Cadastro</legend>
          <div class="field-group">
          
             <label for="id">Id:</label>
-            <input  value="<%= contato.idCadastro %>" type="number" name="idCadastro" id="idCadastro" >
+            <input type="number" name="idCadastro" id="idCadastro" >
          
     
          
             <label for="cliente">Cliente:</label>
-            <input   value="<%= contato.cliente %>" type="text" name="cliente" id="cliente">
+            <input type="text" name="cliente" id="cliente">
        
     
             <label for="codigo">Código:</label>
-            <input   value="<%= contato.codigo %>"type="number" name="codigo"  id="codigo">
+            <input type="number" name="codigo"  id="codigo">
          
     
       
             <label for="referencia">Referencia:</label>
-            <input  value="<%= contato.referencia %>" type="text" name="referencia" id="referencia">
+            <input type="text" name="referencia" id="referencia">
        
       
             <label for="observacao">Observação:</label>
-            <textarea   cols="15" rows="5"  name="observacao" placeholder=" observaçao" id="observacao"><%=contato.observacao%></textarea>
+            <textarea  cols="15" rows="5"  placeholder=" observaçao" id="observacao"></textarea>
         
     
     
@@ -79,12 +76,11 @@
           </div>
         </fieldset>
         <div class="buttons">
-          <button id="btn-submit" >Salvar</button>
-          
+          <button  id="btn-submit"  type="submit" >Salvar</button>
+          <button id="btn-submit"  type="submit">pesquisa</button>
         </div>
-       
+        
       </form>
-    
     </div>
    </section>
    

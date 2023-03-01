@@ -35,7 +35,6 @@ body{
 }
 
 header{
-
   background-color: var(--primary-color)
 }
 
@@ -48,7 +47,6 @@ header .description{
   display: flex;
   justify-content:space-around;
   align-items: center;
-  gap: 0.5rem;
  padding: 1rem;
  
 }
@@ -68,20 +66,8 @@ section {
 margin: .5rem;
 padding: .5rem;
 min-height: 80%;
-flex-direction: column;
 
 
-}
-a:visited{
-  color:var(--txt-color);
-}
-a {
-
-  text-decoration: none;
-  color: inherit;
-}
-.flashMessage{
-  margin-bottom: 3rem;
 }
 
 .contents{
@@ -99,7 +85,6 @@ a {
 form{
   display: flex;
   flex-direction: column;
- /*  margin-top: 10rem; */
 }
 
 fieldset{
@@ -138,11 +123,6 @@ text-align: center;
   margin-bottom: 2rem;
 }
 
-#logo-search{
-  height:30px;
-  width: 30px
-}
-
  label {
   padding: .4rem;
 
@@ -159,7 +139,15 @@ input:focus{
 
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+input[type=number] {
+  -moz-appearance:textfield; /* Firefox */
+}
 
  textarea{
   resize:none;
@@ -170,18 +158,14 @@ input:focus{
  .buttons{
   gap: 0.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   padding-inline: 1.4rem;
-  
 }
 
  #btn-submit{
-   display: flex;
-   align-items: center;
-   justify-content: center;
+
    height: 4rem;
    border-radius: .4rem;
-   margin-top: .8rem;
    margin-bottom: .8rem;
    border: none;
    color: var(--txt-color);
@@ -206,7 +190,7 @@ input:focus{
 
 
 
-/*@media (min-width: 1024px) {
+@media (min-width: 1024px) {
   header .description h4{
     font-size: 2.4rem;
     line-height: 100%;
@@ -219,4 +203,4 @@ input:focus{
  header .description #imgLogo {
   height: 7rem;
  }
-}*/
+}

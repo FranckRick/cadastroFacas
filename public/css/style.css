@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 
@@ -17,7 +16,12 @@
 
 }
 
+.contents{
+  width: min(35rem, 75%);
+  margin-inline: auto;
+  padding-inline: 1.4rem;
 
+}
 
 html,
 body{
@@ -62,18 +66,17 @@ header .description h4{
 
 section {
   display: flex;
-flex-direction: column;
+
   justify-content: center;
   align-items: center;
 margin: .5rem;
-
+padding: .5rem;
+min-height: 80%;
 
 
 }
 
 section .contents{
- /*  display: flex; */
-  padding: 2rem;
   border-radius: .4rem;
   background-color:white;
  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.678) ;
@@ -84,7 +87,7 @@ section .contents{
 section form{
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: .3rem;
   padding: .2rem;
   
 }
@@ -96,10 +99,6 @@ section form{
   text-transform: uppercase;
   letter-spacing: 0.08rem;
 }
-.flashMessage{
-  margin-bottom: 3rem;
-}
-
 
 .input-login,
 .input-senha{
@@ -155,7 +154,7 @@ input:focus{
 
 
 
-/*@media (min-width: 1024px) {
+@media (min-width: 1024px) {
   header .description h4{
     font-size: 2.4rem;
     line-height: 100%;
@@ -168,4 +167,4 @@ input:focus{
  header .description #imgLogo {
   height: 7rem;
  }
-}*/
+}
