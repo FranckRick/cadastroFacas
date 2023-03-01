@@ -1,0 +1,28 @@
+:root{
+  --primary-color:rgb(22 163 74 );
+  --bg-light: hsl(180, 14%, 97%);
+  --bg-color:rgb(240 253 244 );
+  --btn-color: hsl(82, 81%, 44%);
+  --txt-color: hsla(130, 56%, 12%, 1);
+  font-size: 62.5%; /* 1rem = 10px*/
+
+}
+
+.alert-danger{
+ /*  width: 45rem; */
+ margin-top: 1rem;
+  background-color: #f87171;
+  border-radius: 0.5rem;
+  padding: 1rem;
+ font-style: oblique;
+ font-size: 1.2rem;
+
+}
+
+.alert-success{
+  background-color: #bef264;
+  border-radius: 0.5rem;
+  padding: 1rem;
+ font-style: oblique;
+ font-size: 1.2rem;
+}

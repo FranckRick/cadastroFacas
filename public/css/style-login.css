@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+
 }
 
 
@@ -17,7 +18,9 @@
 
 }
 
-
+a:visited{
+  color:var(--txt-color);
+}
 
 html,
 body{
@@ -66,13 +69,15 @@ flex-direction: column;
   justify-content: center;
   align-items: center;
 margin: .5rem;
-
+padding: .5rem;
+min-height: 80%;
 
 
 }
 
 section .contents{
- /*  display: flex; */
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   border-radius: .4rem;
   background-color:white;
@@ -89,65 +94,9 @@ section form{
   
 }
 
- label {
-   font-size: 1.5rem;
-  color: var(--txt-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
-}
-.flashMessage{
-  margin-bottom: 3rem;
-}
 
-
-.input-login,
-.input-senha{
-  font-size: 1.5rem;
-  height: 3rem;
-  border: none;
-  border-bottom: 2px solid hsl(82, 85%, 67%);
-}
-.input-senha{
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  
- 
-
-}
-
-.input-login{
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  
-}
-
-input:focus{
-  outline: 0;
-  box-shadow: 0 0 0 0;
-
-  
-}
-
-
-
-#btn-submit{
- height: 4rem;
-  border-radius: .2rem;
-  margin-top: .8rem;
-  border: none;
-  color: var(--txt-color);
-  padding: .4rem;
-  background-color: var(--btn-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
-  
-}
-
-#btn-submit:hover{
-  background-color: hsl(81, 88%, 80%);
-  transition: background 200ms;
+span{
+  margin: 3rem;
 }
 
 

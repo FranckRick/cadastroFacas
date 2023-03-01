@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Facas de corte e vinco</title>
+  
+  <link rel="stylesheet" href="/css/consultaFacas.css">
+  <link rel="stylesheet" href="/css/cadastro.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+
+ <header>
+  <div class="description">
+    <a href="/cadastro/index">    <img  id="imgLogo" src="/assets/lg_gerprint (1).png" alt=""></a>
+
+    <h4>Consulta Facas</h4>
+    
+  </div>
+ </header>
+      
+   <section>
+
+<form action="/consultaFacas/search" method="get">
+  <label for="tipo_maquina">
+    <span>Maquina</span>
+  </label>
+  <select id="tipo_maquina" name="tipo_maquina" >
+    <option value="bobst">Bobst</option>
+    <option value="manual">Manual</option>
+    <option value="all">All</option>
+  </select>
+
+  <label for="search">Pesquisa</label>
+  <input type="search" name="searchs" id="search">
+  <button id="btn-submit" type="submit" ><img id="logo-search" src="/assets/search_FILL0_wght400_GRAD0_opsz48.svg" alt="botao de pesquisa"></button>
+</form>
+<div class="searchResults">
+  <%-include('includes/messages');%>
+  <%if(contatos.length >0) { %>
+
+    <table  cellspacing="5">
+      <tr>
+        <th>Id</th>
+        <th>Cliente</th>
+        <th>Código</th>
+        <th>Referência</th>
+        <th>Observação</th>
+        <th>Máquina</th>
+      </tr>
+       <% contatos.forEach(contato => { %>
+       
+        <tr>
+          <td><%= contato.idCadastro %></td>
+          <td><%= contato.cliente %></td>
+          <td><%= contato.codigo %></td>
+          <td><%= contato.referencia %></td>
+          <td><%=contato.observacao%></td>
+          <td><%=contato.tipo_maquina%></td>
+          <td><a class="text-edit" href="/cadastro/index/<%= contato._id%>">Editar</a></td>
+          <td><a class='text-danger' href="/cadastro/delete/<%= contato._id %>">Excluir</a></td>
+        </tr>
+     <% }); %>
+    
+    
+    </table>
+    
+  
+  <% } else{%>
+    <h1>Não Exitem Formas Cadastradas</h1>
+    <% } %>
+</div>
+   
+   </section>
+   
+ 
+</body>
+</html>

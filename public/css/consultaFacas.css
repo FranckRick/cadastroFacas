@@ -1,0 +1,100 @@
+:root{
+  --primary-color:rgb(22 163 74 );
+  --bg-light: hsl(180, 14%, 97%);
+  --bg-color:rgb(240 253 244 );
+  --btn-color: hsl(82, 81%, 44%);
+  --txt-color: hsla(130, 56%, 12%, 1);
+  font-size: 62.5%; /* 1rem = 10px*/
+
+}
+
+header{
+  /*preencher tela toda*/
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index: 1;
+  background-color: var(--primary-color)
+}
+
+
+header .description #imgLogo {
+ height: 4.5rem;
+}
+
+
+header .description{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  gap: 0.5rem;
+ padding: 1rem;
+ 
+}
+header .description h4{
+   font-size: 1.4rem;
+  
+   font-weight: 700;
+   text-transform: uppercase;
+   letter-spacing: 0.08rem;
+   color:hsl(127deg 78% 10%)
+}
+
+
+section{
+  top: 9rem;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  /* min-height: 80%; */
+  flex-direction: column;
+  position: absolute;
+}
+
+table{
+align-items: center;
+
+}
+th{
+  
+  background-color:var(--btn-color);
+  font-size: 2rem;
+  font-family: 'DM Sans'; 
+  color: var(--txt-color);
+  padding: .5rem;
+}
+
+td{
+ font-size: 1.5rem;
+ padding: .5rem;
+
+}
+.text-danger,
+.text-edit{
+  width: 45rem;
+  background-color: #f87171;
+  border-radius: 0.5rem;
+  padding: .5rem .8rem .5rem;
+ font-style: oblique;
+
+
+}
+
+.text-edit{
+  background-color: var(--primary-color);
+}
+
+.text-danger:hover{
+  background-color: hsl(0, 89%, 76%);
+  transition: background 200ms;
+}
+
+.text-edit:hover{
+  background-color: hsl(135, 89%, 76%);
+  transition: background 200ms;
+}
