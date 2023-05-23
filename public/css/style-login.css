@@ -18,51 +18,6 @@
 
 }
 
-a:visited{
-  color:var(--txt-color);
-}
-
-html,
-body{
-  width: 100%;
-  height: 100%;
-  
-}
-
-body{
-  font-family: 'DM Sans'; 
-  font-size: 1rem;
-  text-align: center;
-  background-color: var(--bg-light);
- 
-  
-}
-
-header{
-  background-color: var(--primary-color)
-}
-
-header .description #imgLogo {
- height: 4.5rem;
-}
-
-
-header .description{
-  display: flex;
-  justify-content:space-around;
-  align-items: center;
- padding: 1rem;
- 
-}
-header .description h4{
-   font-size: 1.4rem;
-  
-   font-weight: 700;
-   text-transform: uppercase;
-   letter-spacing: 0.08rem;
-   color:hsl(127deg 78% 10%)
-}
-
 section {
   display: flex;
 flex-direction: column;

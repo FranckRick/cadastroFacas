@@ -27,18 +27,23 @@ function CadastroForma(body) {
 CadastroForma.prototype.register = async function() {
   this.valida();
   if(this.errors.length > 0) return;
-   //await this.formExists();
-  // if(this.errors.length > 0) return;
+   await this.formExists();
+   if(this.errors.length > 0) return;
   this.formaCorteEVinco = await CadastroModel.create(this.body);
 };
 
-/*CadastroForma.prototype.formExists=async function (){
-  this.user = await CadastroModel.findOne({ idCadastro:this.body. idCadastro});
+CadastroForma.prototype.formExists = async function() {
+  const existingForm = await CadastroModel.findOne({
+    tipo_maquina: this.body.tipo_maquina,
+    idCadastro: this.body.idCadastro,
+    referencia: this.body.referencia
+  });
 
-  if(this.user) this.errors.push('Forma ja Cadastrada...')
+  if (existingForm) {
+    this.errors.push('Forma já cadastrada.');
+  }
+};
 
-}*/
-  
 CadastroForma.prototype.valida = function() {
 
 
@@ -70,13 +75,26 @@ CadastroForma.prototype.valida = function() {
     };
   }
   
-  CadastroForma.prototype.edit= async function (id){
-    if(typeof id !== 'string') return;
- this.valida();
- if(this.errors.length>0)return;
- this.formaCorteEVinco= await CadastroModel.findByIdAndUpdate(id,this.body,{new:true});
-
-  }
+  CadastroForma.prototype.edit = async function(id) {
+    if (typeof id !== 'string') return;
+    this.valida();
+    if (this.errors.length > 0) return;
+  
+    const existingForm = await CadastroModel.findOne({
+      tipo_maquina: this.body.tipo_maquina,
+      idCadastro: this.body.idCadastro,
+      _id: { $ne: id }
+    });
+  
+    if (existingForm) {
+      this.errors.push('Já existe uma forma com o mesmo ID de cadastro e tipo de máquina.');
+      return;
+    }
+  
+    this.formaCorteEVinco = await CadastroModel.findByIdAndUpdate(id, this.body, { new: true });
+  };
+  
+  
 
   CadastroForma.prototype.searchForm = async function(search,tipo_maquina) {
    if(tipo_maquina==="all"){

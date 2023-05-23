@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login-Catálago facas de corte e vinco</title>
   
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href='/css/style.css'>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,9 +46,9 @@
      <form action="/login" method="post">
       <input type="hidden" name="_csrf" value="<%=csrfToken%>">
       <label  for="login">E-mail</label>
-     <input  class="input-login" autofocus type="email" name="email" id="login">
+     <input  class="input-login" autofocus type="email" name="email" id="login_login">
       <label for="password">Senha</label>
-      <input class="input-senha" type="password" name="password" id="password">
+      <input class="input-senha" type="password" name="password" id="password_login">
     
      <button id="btn-submit"  type="submit">Login</button> 
      </form>
